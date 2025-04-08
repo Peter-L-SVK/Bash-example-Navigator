@@ -1,6 +1,6 @@
 # Bash Navigator
 
-A lightweight terminal-based file navigator and system utility tool written in Bash.
+A lightweight terminal-based file navigator and system utility tool written in Bash. Created as a learning project.
 ## Features
 
 - **File Operations**: Copy, paste, delete files/directories
