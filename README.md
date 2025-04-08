@@ -20,13 +20,13 @@ A lightweight terminal-based file navigator and system utility tool written in B
    ```bash
    git clone https://github.com/yourusername/bash-navigator.git
    cd bash-navigator
-```
+   ```
 
 1. Make scripts executable:
     
-    ```bash
+```bash
     chmod +x navigator.sh functions.sh
-    ```
+```
 2. _(Optional)_ Add to your `.bashrc` for global access:
 ```bash
     function navigator() {
@@ -35,7 +35,7 @@ A lightweight terminal-based file navigator and system utility tool written in B
         ./navigator.sh "$default_position"
         cd "$default_position"
     }
-    ```
+```
 
 ## Usage
 
