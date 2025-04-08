@@ -1,0 +1,35 @@
+	Commands:			 	 
+      
+      ..      -  move one directory up	 
+      cd      -  change directory
+      clear   -  clear screen
+      content -  content of directory
+      copy    -  copy file
+      cpustat -  idle of cpus in percentage
+      dnsup   -  simple lookup monotir if addres is up
+      hddtmp  -  tempereture of disks
+      help    -  help
+      chmod   -	 change mode of file/directory
+      info    -  informations about navigator
+      mkdir   -  make new directory
+      paste   -  paste file
+      q       -  to quit
+      rm      -	 to remove file
+      rmdir   -	 remove directory and it's content if exists
+      usage   -	 list files sizes
+      whois   -  users who are logged in
+
+      Ctrl-C  -  break from function
+
+To run navigator from anywhere enter this in to your .bashrc
+     
+function navigator()
+{
+	default_position=$(pwd)
+	path_to_script=<PATH_TO_SCRIPT> #f.e. /home/currrentuser/
+	cd $path_to_script
+	$path_to_script/navigator.sh "$default_position"
+	echo "Navigator ended."
+	cd "$default_position"
+	default_position=""
+}
