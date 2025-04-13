@@ -1,17 +1,17 @@
 	Commands:			 	 
       
       ..      -  move one directory up	 
-      cd      -  change directory
+      cd      -  change the directory
       clear   -  clear screen
-      content -  content of directory
+      content -  content of the directory
       copy    -  copy file
       cpustat -  idle of cpus in percentage
-      dnsup   -  simple lookup monotir if addres is up
+      dnsup   -  simple lookup monitor if an addres is up
       hddtmp  -  tempereture of disks
       help    -  help
       chmod   -	 change mode of file/directory
       info    -  informations about navigator
-      mkdir   -  make new directory
+      mkdir   -  make a new directory
       paste   -  paste file
       q       -  to quit
       rm      -	 to remove file
