@@ -1,6 +1,11 @@
 # Bash Navigator
 
 A lightweight terminal-based file navigator and system utility tool written in Bash. Created as a learning project back in 2018.
+
+Here is a screenshot of Navigator in action:
+
+![Navigator Screenshot](demo.png)
+
 ## Features
 
 - **File Operations**: Copy, paste, delete files/directories
@@ -29,12 +34,16 @@ A lightweight terminal-based file navigator and system utility tool written in B
 ```
 2. _(Optional)_ Add to your `.bashrc` for global access:
 ```bash
-    function navigator() {
-        default_position=$(pwd)
-        cd /path/to/bash-navigator
-        ./navigator.sh "$default_position"
-        cd "$default_position"
-    }
+function navigator()
+{
+	default_position=$(pwd)
+	path_to_script=<PATH_TO_SCRIPT> #f.e. /home/currrent_user/
+	cd "$path_to_script"
+	$path_to_script/navigator.sh "$default_position"
+	echo "Navigator ended."
+	cd "$default_position"
+	default_position=""
+}
 ```
 
 ## Usage
