@@ -451,7 +451,7 @@ function dnsup
 	    echo "---------------------------------------------------------------"
 	    echo "$(date): -> $dns_address is >>DOWN<<. :-("
 	else
-	    if [[ "$answer" =~ "$ipv4" ]]
+	    if [[ $answer =~ "$ipv4" ]]
 	    then
 		echo "---------------------------------------------------------"
 		echo "$(date): -> $dns_address is UP. :-)"
@@ -503,6 +503,7 @@ function whois
 	date
 	echo""
 	echo "Who is logged in?"
+	echo ""
 	w
 	printf "\nTo quit press Ctrl-C!\n"
 	sleep 1.25
