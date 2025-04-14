@@ -536,9 +536,16 @@ function list_file
     if !([ "$file_to_list" == "" ])
     then
 	path_to_list=$(pwd)/$file_to_list
-	less -N "$path_to_list"
-	clear
-	
+	if !([ -f "$path_to_list" ])
+	then
+	    clear
+	    echo "$path_to_list doesn't exist!"
+	    printf "\n"
+	    
+	else
+	    less -N "$path_to_list"
+	    clear
+	fi
     else
 	clear
 	echo "Error file must have a name!"
