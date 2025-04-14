@@ -52,6 +52,9 @@ do
 	info)
 	    info;;
 
+	list)
+	    list_file;;
+
 	mkdir)
 	    makedir;; 
 
@@ -63,6 +66,9 @@ do
 
 	rmdir)
 	    removedir;;
+
+	touch)
+	    touch_file;;
 
 	dnsup)
 	    dnsup;;

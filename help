@@ -11,11 +11,13 @@
       help    -  help
       chmod   -	 change mode of file/directory
       info    -  informations about navigator
+      list    -  show the content of the file
       mkdir   -  make a new directory
       paste   -  paste file
       q       -  to quit
       rm      -	 to remove file
       rmdir   -	 remove directory and it's content if exists
+      touch   -  touch new or existing files
       usage   -	 list files sizes
       whois   -  users who are logged in
 

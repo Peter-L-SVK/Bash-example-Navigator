@@ -445,13 +445,13 @@ function dnsup
     while true
     do
 	trap '{ printf "\nQuitting."; sleep 1; clear; break; }' INT
-	answer=$(dig +short "$dns_address" | head -1)
+	answer=$(dig +short $dns_address | head -1)
 	if ([ -z "$answer" ])
 	then
 	    echo "---------------------------------------------------------------"
 	    echo "$(date): -> $dns_address is >>DOWN<<. :-("
 	else
-	    if [[ $answer =~ "$ipv4" ]]
+	    if [[ "$answer" =~ $ipv4 ]]
 	    then
 		echo "---------------------------------------------------------"
 		echo "$(date): -> $dns_address is UP. :-)"
@@ -501,11 +501,47 @@ function whois
 	trap '{ printf "\nQuitting."; sleep 1; clear; break; }' INT
 	clear
 	date
-	echo""
+	echo ""
 	echo "Who is logged in?"
 	echo ""
 	w
 	printf "\nTo quit press Ctrl-C!\n"
 	sleep 1.25
     done
+}
+
+function touch_file
+{
+    trap '{ clear; echo "Interupted."; printf "\n"; return; }' INT
+    read -p "Enter name of file to touch: " file_to_touch    
+    if !([ "$file_to_touch" == "" ])
+    then
+	path_to_touch=$(pwd)/$file_to_touch
+	touch "$path_to_touch"
+	clear
+	echo "File $file_to_touch has been touched."
+	printf "\n"
+	
+    else
+	clear
+	echo "Error file must have a name!"
+	printf "\n"
+    fi
+}
+
+function list_file
+{
+    trap '{ clear; echo "Interupted."; printf "\n"; return; }' INT
+    read -p "Enter name of file to be listed: " file_to_list    
+    if !([ "$file_to_list" == "" ])
+    then
+	path_to_list=$(pwd)/$file_to_list
+	less -N "$path_to_list"
+	clear
+	
+    else
+	clear
+	echo "Error file must have a name!"
+	printf "\n"
+    fi
 }
