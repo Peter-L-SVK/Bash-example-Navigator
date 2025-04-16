@@ -55,7 +55,7 @@ Run the navigator:
 
 or:
 ```bash
-navigator #if you addred it to .bashrc in previous step
+navigator #if you added function to .bashrc in previous step
 ```
 ### Key Commands
 
